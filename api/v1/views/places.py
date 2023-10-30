@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''Contains the places view for the API.
-   ************************************
+   *************************************
 '''
 from flask import jsonify, request
 from werkzeug.exceptions import NotFound, MethodNotAllowed, BadRequest
@@ -35,7 +35,7 @@ def handle_places(city_id=None, place_id=None):
 def get_places(city_id=None, place_id=None):
     '''Gets the place with the given id or all places in
     the city with the given id.
-       *************************************************
+     ***************************************************
     '''
     if city_id:
         city = storage.get(City, city_id)
@@ -59,7 +59,7 @@ def get_places(city_id=None, place_id=None):
 
 def remove_place(city_id=None, place_id=None):
     '''Removes a place with the given id.
-       **********************************
+       ***********************************
     '''
     if place_id:
         place = storage.get(Place, place_id)
@@ -96,7 +96,6 @@ def add_place(city_id=None, place_id=None):
 def update_place(city_id=None, place_id=None):
     '''Updates the place with the given id.
        ************************************
-       ````````````````````````````````````
     '''
     xkeys = ('id', 'user_id', 'city_id', 'created_at', 'updated_at')
     place = storage.get(Place, place_id)
@@ -116,6 +115,7 @@ def update_place(city_id=None, place_id=None):
 def find_places():
     '''Finds places based on a list of State, City, or Amenity ids.
        ************************************************************
+       ````````````````````````````````````````````````````````````
     '''
     data = request.get_json()
     if type(data) is not dict:

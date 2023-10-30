@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''Contains the places_reviews view for the API.
-   *********************************************
+   ********************************************
 '''
 from flask import jsonify, request
 from werkzeug.exceptions import NotFound, MethodNotAllowed, BadRequest
@@ -63,7 +63,7 @@ def remove_review(place_id=None, review_id=None):
 
 def add_review(place_id=None, review_id=None):
     '''Adds a new review.
-       *****************
+       ******************
     '''
     place = storage.get(Place, place_id)
     if not place:

@@ -68,14 +68,16 @@ class Place(BaseModel, Base):
         amenity_ids = []
 
     def __init__(self, *args, **kwargs):
-        """initializes Place"""
+        """initializes Place
+           *****************
+        """
         super().__init__(*args, **kwargs)
 
     if models.storage_t != 'db':
         @property
         def reviews(self):
             """getter attribute returns the list of Review instances
-               `````````````````````````````````````````````````````
+               *****************************************************
             """
             from models.review import Review
             review_list = []
@@ -99,7 +101,9 @@ class Place(BaseModel, Base):
 
         @amenities.setter
         def amenities(self, value):
-            """Adds an amenity to this Place"""
+            """Adds an amenity to this Place
+               *****************************
+            """
             from models.amenity import Amenity
             if type(value) is Amenity:
                 if value.id not in self.amenity_ids:

@@ -12,7 +12,7 @@ from models.amenity import Amenity
 
 ALLOWED_METHODS = ['GET', 'DELETE', 'POST', 'PUT']
 '''Methods allowed for the amenities endpoint.
-   ******************************************
+   *******************************************
 '''
 
 
@@ -20,7 +20,7 @@ ALLOWED_METHODS = ['GET', 'DELETE', 'POST', 'PUT']
 @app_views.route('/amenities/<amenity_id>', methods=ALLOWED_METHODS)
 def handle_amenities(amenity_id=None):
     '''The method handler for the amenities endpoint.
-       **********************************************
+       *********************************************
     '''
     handlers = {
         'GET': get_amenities,

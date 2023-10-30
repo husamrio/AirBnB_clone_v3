@@ -70,7 +70,7 @@ def remove_city(state_id=None, city_id=None):
 
 def add_city(state_id=None, city_id=None):
     '''Adds a new city.
-      *****************
+       ***************
     '''
     state = storage.get(State, state_id)
     if not state:

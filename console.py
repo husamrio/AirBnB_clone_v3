@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" console """
+""" console
+    *******
+"""
 
 import cmd
 from datetime import datetime
@@ -18,23 +20,33 @@ classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
 
 
 class HBNBCommand(cmd.Cmd):
-    """ HBNH console """
+    """ HBNH console
+        ************
+    """
     prompt = '(hbnb) '
 
     def do_EOF(self, arg):
-        """Exits console"""
+        """Exits console
+           *************
+        """
         return True
 
     def emptyline(self):
-        """ overwriting the emptyline method """
+        """ overwriting the emptyline method
+            ********************************
+        """
         return False
 
     def do_quit(self, arg):
-        """Quit command to exit the program"""
+        """Quit command to exit the program
+           ********************************
+        """
         return True
 
     def _key_value_parser(self, args):
-        """creates a dictionary from a list of strings"""
+        """creates a dictionary from a list of strings
+           *******************************************
+        """
         new_dict = {}
         for arg in args:
             if "=" in arg:
@@ -55,7 +67,10 @@ class HBNBCommand(cmd.Cmd):
         return new_dict
 
     def do_create(self, arg):
-        """Creates a new instance of a class"""
+        """Creates a new instance of a class
+           *********************************
+           ``````````````````````````````````
+        """
         args = arg.split()
         if len(args) == 0:
             print("** class name missing **")

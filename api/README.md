@@ -2,4 +2,4 @@
 
 ## Description
 
-The API for  AirBnB web application.
+The API for the AirBnB web application.

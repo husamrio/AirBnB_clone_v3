@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Has a Flask web application API.
+'''Contains a Flask web application API.
    *************************************
 '''
 import os

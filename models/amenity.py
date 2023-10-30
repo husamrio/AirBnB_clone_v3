@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """ holds class Amenity
     *******************
 """
@@ -12,7 +12,7 @@ from sqlalchemy.orm import relationship
 
 class Amenity(BaseModel, Base):
     """Representation of Amenity
-       *************************
+      **************************
     """
     if models.storage_t == 'db':
         __tablename__ = 'amenities'

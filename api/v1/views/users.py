@@ -54,7 +54,8 @@ def remove_user(user_id):
 @app_views.route('/users', methods=['POST'])
 def add_user():
     '''Adds a new user.
-       ****************
+      *****************
+      `````````````````
     '''
     data = {}
     try:
@@ -81,7 +82,6 @@ def add_user():
 def update_user(user_id):
     '''Updates the user with the given id.
        ***********************************
-       ```````````````````````````````````
     '''
     xkeys = ('id', 'email', 'created_at', 'updated_at')
     user = storage.get(User, user_id)

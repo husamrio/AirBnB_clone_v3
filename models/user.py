@@ -45,8 +45,8 @@ class User(BaseModel, Base):
 
     def __setattr__(self, __name: str, __value) -> None:
         '''Sets an attribute of this class to a given value.
-           ************************************************
-           ````````````````````````````````````````````````
+           *************************************************
+           ``````````````````````````````````````````````````
         '''
         if __name == 'password':
             if type(__value) is str:
